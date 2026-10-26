@@ -2,6 +2,8 @@
 
 I built this small dashboard for the Harrisons Sabah IT Executive assessment. It gives the sales team one place to see the overall order figures and look through orders by site or status. The orders come from the assessment's fictional, read-only API. The app does not save or change any order data.
 
+Live app: [Sales Order Monitor](https://brandonvalentine23.github.io/IT-Executive-Assessment-Sales-Order-Monitoring/)
+
 ## Run it locally
 
 Install Node.js 18 or newer, then run this in the project folder:
@@ -41,4 +43,4 @@ The assessment provides the `x-assessment-key` used in `app.js`. It is a shared 
 
 OpenAI Codex helped with planning, parts of the code, code review, and layout changes. I used its explanations and comments to work through how the files and API fit together, and I adjusted the styling during that process.
 
-The app was checked locally against the assessment API. Checks included the summary figures, an exact order-number search, site filtering, pagination, no-results handling, and the mobile layout. Both JavaScript files also pass `node --check`.
+The app was checked locally against the assessment API. Checks included the summary figures, an exact order-number search, site filtering, pagination, no-results handling, and the mobile layout. I also opened the published GitHub Pages app and confirmed that the API populated the dashboard and order list. Both JavaScript files also pass `node --check`.
