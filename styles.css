@@ -608,7 +608,8 @@ td.amount-col {
 
 @media(max-width:380px) {
   .metric-foot {
-    font-size:10px
+    font-size: 10px;
+    white-space: normal;
   }
   .select-wrap {
     width:100%
