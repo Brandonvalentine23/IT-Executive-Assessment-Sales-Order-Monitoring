@@ -61,13 +61,20 @@ Search, filtering, and pagination are handled through API requests rather than s
 
 To improve the user experience, search requests use a 300 ms debounce, and previous requests are cancelled when newer ones are initiated.
 
-## Technical Decisions and Limitations
+## Technical Decisions
 
 - **Simple Architecture:** Vanilla JavaScript was chosen to keep the application lightweight and easy to deploy without a build process.
 - **Dashboard Totals:** Summary figures represent all orders, while the order list count reflects active search and filters.
-- **Order Date:** The API's `CreatedDateTime1` field is used because a separate order-date field is unavailable.
-- **API Security:** The provided `x-assessment-key` is included in frontend requests and is visible in the browser. It is treated as a key for the assessment's read-only mock API, not as a private credential. A production application requiring a secret API key would use a backend to handle requests securely.
-- **Internet Connection:** The application requires internet access to retrieve API data and load Google Fonts. A fallback font is used if Google Fonts is unavailable.
+
+## Limitations
+
+The API does not provide a separate order-date field, so I used `CreatedDateTime1` for the date displayed in the order list.
+
+The app requires an internet connection to retrieve orders from the API and does not support offline use.
+
+Since the app is hosted on GitHub Pages, the assessment API key is visible in browser requests. For a production application requiring a private API key, I would use a backend to handle API requests securely.
+
+Testing was mainly performed manually, and automated tests were not implemented.
 
 ## Testing
 
