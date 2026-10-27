@@ -1,46 +1,90 @@
 # Sales Order Monitor
 
-I built this small dashboard for the Harrisons Sabah IT Executive assessment. It gives the sales team one place to see the overall order figures and look through orders by site or status. The orders come from the assessment's fictional, read-only API. The app does not save or change any order data.
+A simple web-based dashboard developed for the Harrisons Sabah IT Executive Assessment. It allows users to monitor overall sales order figures and browse orders using search, site, and status filters.
 
-Live app: [Sales Order Monitor](https://brandonvalentine23.github.io/IT-Executive-Assessment-Sales-Order-Monitoring/)
+The dashboard retrieves data from the assessment's fictional, read-only REST API. It does not store, create, or modify any order data.
 
-## Run it locally
+**Live Demo:** [Sales Order Monitor](https://brandonvalentine23.github.io/IT-Executive-Assessment-Sales-Order-Monitoring/)
 
-Install Node.js 18 or newer, then run this in the project folder:
+## Features
 
-```bash
-node server.js
-```
+- **Dashboard Summary:** Displays total, open, completed, and cancelled orders, along with total order value.
+- **Order Listing:** Shows order details with pagination (25 orders per page).
+- **Search and Filtering:** Search by order number and filter by site or status.
+- **Error Handling:** Loading indicators, no-results messages, and a retry option for failed requests.
+- **Responsive Design:** Adapts the order table into cards for smaller screens.
 
-Open [http://localhost:4173](http://localhost:4173) in your browser. There is no `npm install` step because the project has no package dependencies. Stop the server with `Ctrl+C` in the terminal.
+## Technologies Used
 
-`server.js` only serves the local files. The hosted version can run on GitHub Pages because the browser makes the API requests directly.
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
+- REST API
+- Node.js (local development only)
+- GitHub Pages (deployment)
 
-## What the app shows
+## Getting Started
 
-- A summary of total orders, open orders, completed orders, cancelled orders, and total order value.
-- A paginated order list with the order number, customer, site, date, status, and amount.
-- Search and filters for site and status.
-- Loading, empty-result, and connection-error messages, plus a retry button when a request fails.
-- A layout that changes the order table into cards on smaller screens.
+**Requirements:** Node.js 18 or newer.
 
-## How it works
+1. Clone or download the repository.
+2. Open a terminal in the project directory.
+3. Run the local server:
 
-`index.html` is the page structure, `styles.css` controls the layout, and `app.js` fetches and displays the data. When the page opens, `app.js` requests the available sites and statuses from the API's `/meta` endpoint and requests the first page of orders from `/sales-orders`.
+   ```bash
+   node server.js
+   ```
 
-The list request includes the current page, page size, newest-first sort order, and any search or filter values. The API response provides both the rows and the summary figures. Search waits 300 ms after typing stops before making a request. If a newer request starts, the older one is cancelled so an old result cannot replace the current view.
+4. Open `http://localhost:4173` in your browser.
 
-The assessment provides the `x-assessment-key` used in `app.js`. It is a shared key for this public, read-only mock API. It should not be treated as a secret or reused for a private API. There is no database or separate order backend in this project.
+No additional dependencies or installation steps are required.
 
-## Choices and limitations
+The `server.js` file is only used to serve the application locally. The deployed version runs directly on GitHub Pages.
 
-- I used plain HTML, CSS, and JavaScript to keep the app easy to run and host without a build step.
-- The summary cards show totals for all orders, as returned by the API. The count above the list reflects the active filters.
-- The API does not have a separate order-date field, so the list displays `CreatedDateTime1` as the date.
-- The API and Google Fonts need an internet connection. If the font does not load, the browser uses a fallback font.
+## Architecture and API Integration
 
-## Testing and AI use
+The application uses a frontend-only architecture built with HTML, CSS, and JavaScript. A separate backend or database is not required because all order information is retrieved from the provided read-only REST API.
 
-OpenAI Codex helped with planning, parts of the code, code review, and layout changes. I used its explanations and comments to work through how the files and API fit together, and I adjusted the styling during that process.
+The main files are:
 
-The app was checked locally against the assessment API. Checks included the summary figures, an exact order-number search, site filtering, pagination, no-results handling, and the mobile layout. I also opened the published GitHub Pages app and confirmed that the API populated the dashboard and order list. Both JavaScript files also pass `node --check`.
+- `index.html` — Page structure and dashboard components.
+- `styles.css` — Styling and responsive layouts.
+- `app.js` — API integration, user interactions, and data rendering.
+- `server.js` — Lightweight local development server.
+
+The application communicates with two API endpoints:
+
+- `/meta` — Retrieves available sites and order statuses.
+- `/sales-orders` — Retrieves order records, pagination information, and summary figures.
+
+Search, filtering, and pagination are handled through API requests rather than storing the entire dataset locally. Orders are requested newest first.
+
+To improve the user experience, search requests use a 300 ms debounce, and previous requests are cancelled when newer ones are initiated.
+
+## Technical Decisions and Limitations
+
+- **Simple Architecture:** Vanilla JavaScript was chosen to keep the application lightweight and easy to deploy without a build process.
+- **Dashboard Totals:** Summary figures represent all orders, while the order list count reflects active search and filters.
+- **Order Date:** The API's `CreatedDateTime1` field is used because a separate order-date field is unavailable.
+- **API Security:** The provided `x-assessment-key` is included in frontend requests and is visible in the browser. It is treated as a key for the assessment's read-only mock API, not as a private credential. A production application requiring a secret API key would use a backend to handle requests securely.
+- **Internet Connection:** The application requires internet access to retrieve API data and load Google Fonts. A fallback font is used if Google Fonts is unavailable.
+
+## Testing
+
+The application was tested locally and on GitHub Pages. Testing included:
+
+- Verifying dashboard figures against API responses.
+- Searching for specific order numbers.
+- Testing site and status filters.
+- Checking pagination and empty-result handling.
+- Reviewing error handling and retry functionality.
+- Checking responsiveness on smaller screens.
+- Confirming successful API data loading after deployment.
+
+JavaScript syntax was also checked using `node --check`.
+
+## AI Assistance
+
+OpenAI Codex was used to assist with planning, generating the initial implementation, reviewing code, debugging, and improving the layout.
+
+I provided instructions, reviewed the generated results, made styling adjustments, and used Codex to assist with functional testing and understanding the application's structure and API integration.
