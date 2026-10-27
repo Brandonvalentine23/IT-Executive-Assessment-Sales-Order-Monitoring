@@ -667,4 +667,9 @@ td.amount-col {
   td.amount-col {
     text-align: left;
   }
+  td .status-pill {
+    align-self: flex-start;
+    max-width: 100%;
+    white-space: normal;
+  }
 }
