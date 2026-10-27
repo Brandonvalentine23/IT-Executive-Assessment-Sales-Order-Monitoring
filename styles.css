@@ -50,7 +50,7 @@ button {
 .brand-mark {
   width: 37px;
   height: 37px;
-  border: 1px solid #6a9c86;
+  border: 1px solid #8db6e8;
   border-radius: 10px;
   display: grid;
   place-items: center;
@@ -60,7 +60,7 @@ button {
 }
 
 .brand-mark span {
-  color:#b9d36f
+  color:#a9d1ff
 }
 
 .rail-label {
@@ -89,7 +89,7 @@ button {
 
 .topbar {
   height: 72px;
-  border-bottom: 1px solid #e2e9e2;
+  border-bottom: 1px solid #e1e8f2;
   background: #fff;
   display: flex;
   align-items: center;
@@ -112,7 +112,7 @@ button {
 }
 
 .topbar-right {
-  color: #6d8076;
+  color: #65758b;
   font-size: 12px;
   white-space:nowrap
 }
@@ -122,7 +122,7 @@ button {
   border-radius: 50%;
   width: 7px;
   height: 7px;
-  background: #75b98b;
+  background: #6aa9ed;
   margin-right:7px
 }
 
@@ -141,7 +141,7 @@ button {
 
 .eyebrow span {
   margin: 0 6px;
-  color:#a5b9ac
+  color:#a5b7ce
 }
 
 .hero-row {
@@ -169,16 +169,16 @@ h1 {
 }
 
 .title-stop {
-  color:#81a94e
+  color:#5a9fe8
 }
 
 .intro {
-  color: #788a80;
+  color: #718197;
   font-size:14px
 }
 
 .updated {
-  color: #87988e;
+  color: #8190a4;
   font-size: 12px;
   white-space: nowrap;
   padding-bottom:4px
@@ -193,11 +193,11 @@ h1 {
 
 .metric {
   background: #fff;
-  border: 1px solid #e3eae3;
+  border: 1px solid #e0e8f2;
   border-radius: 13px;
   padding: 23px 22px;
   min-height: 153px;
-  box-shadow:0 3px 15px rgba(29,66,46,.025)
+  box-shadow:0 3px 15px rgba(24,57,102,.04)
 }
 
 .metric-featured {
@@ -242,19 +242,19 @@ h1 {
   background:#d9a957
 }
 
-.foot-dot.green {
-  background:#69b58b
+.foot-dot.completed {
+  background:#8e7ad7
 }
 
 .foot-dot.muted {
-  background:#b5c1b9
+  background:#aeb9c8
 }
 
 .orders-panel {
   background: #fff;
-  border: 1px solid #e3eae3;
+  border: 1px solid #e0e8f2;
   border-radius: 15px;
-  box-shadow: 0 8px 30px rgba(29,66,46,.025);
+  box-shadow: 0 8px 30px rgba(24,57,102,.04);
   overflow:hidden
 }
 
@@ -275,8 +275,8 @@ h1 {
 .count-badge {
   font: 700 11px 'DM Sans',sans-serif;
   letter-spacing: 0;
-  background: #eaf3ea;
-  color: #3d7251;
+  background: #e8f1ff;
+  color: #315f99;
   border-radius: 20px;
   padding: 4px 8px;
   vertical-align: middle;
@@ -285,7 +285,7 @@ h1 {
 
 .section-note {
   font-size: 11px;
-  color: #8b9a90;
+  color: #8090a4;
   padding-bottom:4px
 }
 
@@ -297,8 +297,8 @@ h1 {
 
 .search-wrap,.select-wrap {
   height: 39px;
-  border: 1px solid #dbe5dc;
-  background: #fbfcfb;
+  border: 1px solid #d8e3f0;
+  background: #fbfdff;
   border-radius: 7px;
   display: flex;
   align-items: center;
@@ -314,7 +314,7 @@ h1 {
   width: 17px;
   height: 17px;
   fill: none;
-  stroke: #81978b;
+  stroke: #8296af;
   stroke-width: 1.8;
   margin: 0 11px 0 13px;
   flex:none
@@ -327,12 +327,12 @@ h1 {
   min-width: 0;
   flex: 1;
   font-size: 12px;
-  color: #193b2f;
+  color: #203b60;
   padding-right:10px
 }
 
 .search-wrap input::placeholder {
-  color:#9dac9f
+  color:#95a4b8
 }
 
 .select-wrap {
@@ -347,20 +347,20 @@ h1 {
   width: 100%;
   height: 100%;
   padding: 0 12px;
-  color: #3b5849;
+  color: #36516f;
   font-size: 12px;
   cursor:pointer
 }
 
 .search-wrap:focus-within,.select-wrap:focus-within {
-  border-color: #4e8964;
-  box-shadow:0 0 0 3px #e2f0e4
+  border-color: #4a86d4;
+  box-shadow:0 0 0 3px #e4f0ff
 }
 
 .clear-btn {
   border: 0;
   background: transparent;
-  color: #477e5b;
+  color: #3e72b2;
   font-size: 12px;
   font-weight: 700;
   padding:0 5px
@@ -394,24 +394,24 @@ th {
 
 td {
   padding: 15px 27px;
-  border-bottom: 1px solid #eef2ee;
-  color: #475c50;
+  border-bottom: 1px solid #e9eef5;
+  color: #506077;
   font-size: 12px;
   white-space:nowrap
 }
 
 tbody tr:hover {
-  background:#fbfdfb
+  background:#f6f9ff
 }
 
 td.order-id {
   font-weight: 800;
-  color:#1b4a37
+  color:#174f8d
 }
 
 td.customer {
   font-weight: 700;
-  color:#233e32
+  color:#2b3c55
 }
 
 td.amount-col,th.amount-col {
@@ -420,7 +420,7 @@ td.amount-col,th.amount-col {
 
 td.amount-col {
   font-weight: 700;
-  color: #254b36;
+  color: #294d78;
   font-variant-numeric:tabular-nums
 }
 
@@ -431,8 +431,8 @@ td.amount-col {
   padding: 5px 9px;
   font-size: 11px;
   font-weight: 700;
-  background: #edf2ed;
-  color:#647b68
+  background: #eef2f8;
+  color:#65758a
 }
 
 .status-pill.open {
@@ -446,19 +446,19 @@ td.amount-col {
 }
 
 .status-pill.delivered {
-  background: #e6f4e9;
-  color:#3b8655
+  background: #eee9fb;
+  color:#7252aa
 }
 
 .status-pill.cancelled {
-  background: #f1f2f1;
-  color:#768078
+  background: #f1f3f6;
+  color:#758194
 }
 
 .message {
   padding: 40px 24px;
   text-align: center;
-  color: #71877a;
+  color: #6f8095;
   font-size:13px
 }
 
@@ -483,7 +483,7 @@ td.amount-col {
   align-items: center;
   padding: 10px 27px;
   gap: 15px;
-  color: #8a9a90;
+  color: #8493a8;
   font-size:11px
 }
 
@@ -495,16 +495,16 @@ td.amount-col {
 
 .pagination button {
   background: #fff;
-  border: 1px solid #dce6dc;
+  border: 1px solid #d8e3f0;
   border-radius: 7px;
-  color: #456c52;
+  color: #365f91;
   padding: 7px 10px;
   font-size: 11px;
   font-weight:700
 }
 
 .pagination button:hover:not(:disabled) {
-  background:#edf6ed
+  background:#eaf3ff
 }
 
 .pagination button:disabled {
@@ -514,7 +514,7 @@ td.amount-col {
 
 .source-note {
   margin: 17px 0 0;
-  color: #9aa99e;
+  color: #98a6b8;
   font-size:11px
 }
 
@@ -620,7 +620,7 @@ td.amount-col {
 @media (max-width: 700px) {
   .table-wrap {
     padding: 0 15px;
-    background: #f7faf7;
+    background: #f5f8fd;
     overflow-x: visible;
   }
   table {
@@ -637,7 +637,7 @@ td.amount-col {
   tbody tr {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 1px solid #e3eae3;
+    border: 1px solid #e0e8f2;
     border-radius: 10px;
     background: #fff;
     padding: 9px 15px;
